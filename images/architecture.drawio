@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-01-13T15:47:44.334Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="Ui-yroT53Z2cNGCnBI_c" version="21.6.8" type="device">
+<mxfile host="Electron" modified="2024-01-13T15:50:25.013Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="P_Mmk0Qru_Rr0_baSOYv" version="21.6.8" type="device">
   <diagram name="Página-1" id="-YCDmao3VCEmHztwjtE3">
     <mxGraphModel dx="2885" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -28,20 +28,11 @@
         <mxCell id="kotbfbAOT1RfUfPz4vf5-7" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://analyticstraininghub.com/wp-content/uploads/2020/10/icon-tableau.png;" parent="1" vertex="1">
           <mxGeometry x="680" y="485" width="120" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="kotbfbAOT1RfUfPz4vf5-8" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://seeklogo.com/images/D/dbt-logo-E4B0ED72A2-seeklogo.com.png;" parent="1" vertex="1">
-          <mxGeometry x="530" y="400" width="143.48" height="55" as="geometry" />
-        </mxCell>
-        <mxCell id="kotbfbAOT1RfUfPz4vf5-13" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 30px;&quot;&gt;E&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="130" y="475" width="40" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="kotbfbAOT1RfUfPz4vf5-14" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 30px;&quot;&gt;L&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="350" y="475" width="40" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="kotbfbAOT1RfUfPz4vf5-15" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 30px;&quot;&gt;T&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="590" y="475" width="40" height="50" as="geometry" />
-        </mxCell>
         <mxCell id="vR9rnwirkYuTVUBy_0PF-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png;" vertex="1" parent="1">
           <mxGeometry x="235.51999999999998" y="270" width="268.97" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="vR9rnwirkYuTVUBy_0PF-2" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" vertex="1" parent="1">
+          <mxGeometry x="490" y="350" width="48.78" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
