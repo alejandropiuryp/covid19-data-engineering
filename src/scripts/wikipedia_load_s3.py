@@ -1,10 +1,13 @@
 import boto3
 import os
+import json
 from datetime import datetime
+import pandas as pd
 
 def load_data(**kwargs):
     ti = kwargs['ti']
     data = ti.xcom_pull(key='data', task_ids='transform_data')
+
 
     access_key = os.getenv("S3_ACCESS_KEY")
     secret_key = os.getenv("S3_SECRET_KEY")

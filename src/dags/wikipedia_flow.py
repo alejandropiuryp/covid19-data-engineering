@@ -1,9 +1,7 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
-from airflow.providers.amazon.aws.operators.s3 import (
-    S3CreateObjectOperator
-)
+from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
 import sys
 import os
 
@@ -20,9 +18,9 @@ with DAG(
     },
     start_date=datetime(2024, 1, 1),
     schedule_interval=None,
-    catchup=False
+    catchup=False,
+    template_searchpath="/opt/airflow/dags/include/sql"
 ) as dag:
-    # Extraction
     extract_data_from_wikipedia = PythonOperator(
         task_id="extract_data",
         python_callable=extract_wikipedia_data,
@@ -39,8 +37,19 @@ with DAG(
         python_callable=load_data,
         provide_context=True
     )
+    copy_csv_into_snowflake_table = SnowflakeOperator(
+        task_id="copy_csv_into_snowflake_table",
+        snowflake_conn_id="conn_id_snowflake",
+        sql="insert_data.sql",
+        params={
+            "destination": 'RAW.WIKIPEDIA_DATA.SPANISH_MUNICIPALITY',
+            "origin": '@RAW.WIKIPEDIA_DATA.SPANISH_MUNICIPALITY_STAGE',
+            "format": 'CSV_FORMAT'
+        }
+    )
 
-    extract_data_from_wikipedia >> transform_data >> load_data_into_s3
+    extract_data_from_wikipedia >> transform_data >> load_data_into_s3 >> copy_csv_into_snowflake_table
+
 # Preproccesiing
 
 # Write
