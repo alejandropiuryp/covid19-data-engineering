@@ -20,10 +20,10 @@
 ![Screen Shot](images/architecture.png)
 
 
-This project is an example of a modern data stack. It is a basic ETL pipeline that contains the following stages:
+This project is an example of a modern data stack. It is a basic ELT pipeline that contains the following stages:
 - Extraction: Web scraping of Wikipedia's page containing ranked lists of Spanish municipalities.
-- Transform: Tasks that will process the data into the Kimball model for analytics.
-- Load: Loading data into a data warehouse.
+- Load: Loading data into a data warehouse into the raw layer.
+- Transform: dbt is the T in the ELT. Include the **great expectations** in the source layer to validate data. After, we will transform the data to model it in a **Kimball** data mart.
 
 The orchestration tool will be in charge of the entire workflow. The goal is to showcase the data in a dashboard created by a BI tool like Tableau. 
 
@@ -38,7 +38,7 @@ Please note that this project is for learning purposes only.
 * Orchestration tool: Apache Airflow 2.8.0 deployed using Docker
 * Object storage (Data Lake): AWS S3
 * Data Warehouse: Snowflake
-* BI Tool: Tableau
+* Transformation tool: DBT
 
 
 

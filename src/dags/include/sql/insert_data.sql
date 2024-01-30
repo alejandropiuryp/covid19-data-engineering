@@ -1,0 +1,1 @@
+COPY INTO {{ params.destination }} FROM {{ params.origin }} FILE_FORMAT = {{params.format}}

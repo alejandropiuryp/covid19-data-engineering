@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: dim_location
+    description: "Dimension model of locations"
+    columns:
+      - name: location_key
+        description: "Surrogate key generated"
+        tests:
+          - unique
+          - not_null
+      - name: id
+        description: "Id from the source"
+        tests:
+          - not_null
+      - name: municipality
+        description: "Municipality"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      - name: province
+        description: "Province"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      - name: coordinates
+        description: "Coordinates"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+  - name: fct_demographic
+    description: "Fact table about demographic locations"
+    columns:
+      - name: id
+        description: "Id from the source"
+        tests:
+          - not_null
+      - name: population_density
+        description: "Population density in inhabitants/km^2"
+        tests:
+          - not_null
+      - name: surface
+        description: "Surface in km^2"
+        tests:
+          - not_null
+      - name: population
+        description: "Population"
+        tests:
+          - not_null

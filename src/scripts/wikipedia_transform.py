@@ -34,6 +34,6 @@ def transform_data(**kwargs):
     df = population_data_df.merge(population_density_data_df, on=['municipality', 'province'])
     df = df.merge(surface_area_data_df, on=['municipality', 'province'])
     df["coordinates"] = df.apply(lambda x: get_lat_lon(x['municipality'], x['province']), axis=1)
-    ti.xcom_push(key='data', value=df.to_csv(index=False))
+    ti.xcom_push(key='data', value=df.to_csv(index=True, index_label="id"))
 
     return "OK"

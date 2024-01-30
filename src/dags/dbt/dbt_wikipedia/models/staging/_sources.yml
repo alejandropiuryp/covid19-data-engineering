@@ -1,0 +1,46 @@
+version: 2
+
+sources:
+  - name: raw_wikipedia
+    description: 'Wikipedia raw data provided by Snowflake'
+    database: RAW
+    schema: WIKIPEDIA_DATA
+    tables:
+      - name: SPANISH_MUNICIPALITY
+        description: 'Data extracted from web scrapping'
+
+models:
+  - name: wikipedia_stg
+    columns:
+      - name: id
+        description: "Id"
+        tests:
+          - unique
+          - not_null
+      - name: municipality
+        description: "Municipality"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      - name: province
+        description: "Province"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      - name: coordinates
+        description: "Coordinates"
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      - name: population_density
+        description: "Population density in inhabitants/km^2"
+        tests:
+          - not_null
+      - name: surface
+        description: "Surface in km^2"
+        tests:
+          - not_null
+      - name: population
+        description: "Population"
+        tests:
+          - not_null
